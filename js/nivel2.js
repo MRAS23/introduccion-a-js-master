@@ -246,18 +246,11 @@ while (numero >= 1) {
     }
 */
 
-// TAREA: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
+/* // TAREA: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
 
-/* 
-let contador = 0;
-for (let i = 3; i < 22; i++) {
-  if (contador === 3) {
-    console.log(i);
-    contador = 0;
-  }
-  contador = contador + 1;
-}
- */
+for (let i = 3; i < 22; i += 3) {
+  console.log(i);
+} */
 
 /*
     Iterando a traves de Arrays
@@ -349,19 +342,18 @@ fizzBuzz();
 // Calcular el promedio de todos los números en un array de números. (y ponerlo en una función)
 // ej.: calcularPromedio([10,5,4,2,8])
 
-/*
-let numerosArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let promedioArray = 0;
-function calculaPromedioArray(numerosArray) {
-  for (i = 0; i < numerosArray.length; i++) {
-    promedioArray = promedioArray + numerosArray[i];
+let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function calcularPromedio(numeros) {
+  let sumaNumeros = 0;
+  for (i = 0; i < numeros.length; i++) {
+    sumaNumeros = sumaNumeros + numeros[i];
   }
-  promedioArray / numerosArray.length;
-  return promedioArray;
+
+  return sumaNumeros / numeros.length;
 }
 
-console.log(calculaPromedioArray(numerosArray));
-*/
+console.log(calcularPromedio(numeros));
 
 //////////////////////////////////////////////////////////////////////////////
 // ¡Felicidades! ¡Has terminado el Nivel 2 de JavaScript Básico!            //

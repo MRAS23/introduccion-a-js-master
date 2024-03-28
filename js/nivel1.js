@@ -20,7 +20,6 @@
     Cuando estás escribiendo código que querés que la máquina ejecute, ponelos AFUERA de los bloques de comentario.
 */
 
-
 /*
     Mostrando texto
     ===============
@@ -45,14 +44,12 @@
 // Tarea: Una vez que la alerta funcione, comentala poniendo '//' en la línea donde está el código y guardá los cambios.
 // Una vez que recargás la página, ya no debería aparecer más.
 
-
 // Tarea: Ahora probá hacer un console.log de un mensaje que queramos.
 
 //console.log('Hola!');
 
 // Consejo: Para recargar el navegador podemos apretar 'CMD + R' en Mac y 'CTRL + R' en
 //      Windows.
-
 
 // Consejo: El atajo del teclado para guardar cambios a un archivo es 'CMD + S' en Mac y 'CTRL + S' en
 //      Windows.
@@ -121,24 +118,22 @@
     Esto va a mostrar un cartelito con el texto 'Hola Mundo!'
 */
 
-// Crear 2 variables nuevas, una con tu nombre, la segunda con tu edad. 
+// Crear 2 variables nuevas, una con tu nombre, la segunda con tu edad.
 //Dales un nombre apropriado y mostralas con un alert.
 
 //let nombre = 'Mauro';
 //let edad = 27;
 //alert('Mi nombre es ' + nombre + 'y mi edad es '+ edad);
 
-
 // Consejo: para mostrar 2 variables de texto al mismo tiempo, las podés unir usando el signo '+'. Ejemplo:
 
 /*
-* let nombre = 'Fabricio'
-* let apellido = 'Sodano'
-*
-* alert(nombre + apellido)
-*
-* */
-
+ * let nombre = 'Fabricio'
+ * let apellido = 'Sodano'
+ *
+ * alert(nombre + apellido)
+ *
+ * */
 
 /*
     Constantes
@@ -167,7 +162,6 @@
 //alert(IVA);
 
 // TAREA: Intentar asignar un valor a una constante y ver qué pasa (mirar la consola)
-
 
 // Consejo: No te olvides de comentar (//) los alerts y los errores intencionales (como en la tarea anterior) para
 // que los alerts no aparezcan cada vez, y para que los errores no hagan que el programa se detenga.
@@ -262,18 +256,17 @@ console.log('El resultado es: ' + resultadoMultiplicacion);
 // Ejecutá la función sumar y mostrá su resultado en la consola
 
 function sumar(numero1, numero2) {
-    return numero1 + numero2;
+  return numero1 + numero2;
 }
 
 //console.log(sumar(1, 10));
-
 
 // TAREA: Ahora creemos otra función llamada 'restar'
 //       Que acepte 2 números como parámetro y los reste, y que devuelva ese valor.
 // Ejecutá la función con los números 5 y 1 y mostralos con console.log
 
 function restar(numero1, numero2) {
-    return numero1 - numero2;
+  return numero1 - numero2;
 }
 
 //console.log(restar(5, 1));
@@ -293,8 +286,7 @@ let nombre = prompt('Cual es tu nombre?: ');
 console.log(saludar(nombre));
 */
 
-/*
-TAREA CLASE 1:
+/* TAREA CLASE 1:
 1- Crear una funcion que tome como parametro el año actual y el año de nacimiento
 y calcule la edad del usuario (aproximadamente).
 Preguntar estos datos al usuario y guardarlos en 2 variables.
@@ -304,50 +296,60 @@ Imprimir el resultado en la consola.
 2- Preguntar el salario anual y calcular el salario mensual.
 3- Preguntar el salario mensual y calcular el anual.
 4- Preguntar el salario mensual y calcular el semanal, diario, hora.
-*/
+ */
 
-/*
-    //Ejercicio 1
-let anioNacimiento = Number(prompt('Cual es tu año de nacimiento?'));
-let anioActual = 2022;
+/* //Ejercicio 1
+let anioNacimiento = Number(prompt("Cual es tu año de nacimiento?"));
+let anioActual = 2023;
 
-function calcularEdad(anioActual, anioNacimiento){
-    return anioActual - anioNacimiento;
+function calcularEdadUsuario(anioActual, anioNacimiento) {
+  return anioActual - anioNacimiento;
 }
 
-console.log('Su edad es de: ' + calcularEdad(anioActual, anioNacimiento));
+console.log("Tu edad es: " + calcularEdadUsuario(anioActual, anioNacimiento) + " años");
 
+//Ejercicio 2
+let salarioAnual = Number(prompt("ingrese su salario anual"));
 
-    //Ejercicio 2
-let salarioAnual = Number(prompt('ingrese su salario anual'));
-
-function calcularSalarioMensual(salarAnual){
-    return salarioAnual / 12;
+function calcularSalarioMensual(salarAnual) {
+  const numeroMesesAnio = 12;
+  return salarioAnual / numeroMesesAnio;
 }
-console.log('Su salario mensual es de: $' + calcularSalarioMensual(salarioAnual));
+console.log("Su salario mensual es de: $" + calcularSalarioMensual(salarioAnual));
 
+//Ejercicio 3
+let salarioMensual = Number(prompt("Ingrese su salario mensual"));
 
-    //Ejercicio 3
-let salarioMensual = Number(prompt('Ingrese su salario mensual'));
-
-function calcularSalarioAnual(salarioMensual){
-    return salarioMensual * 12;
-}
-
-function calcularSalarioSemanal(salarioMensual){
-    return salarioMensual / 4;
+function calcularSalarioAnual(salarioMensual) {
+  const numeroMesesAnio = 12;
+  return salarioMensual * numeroMesesAnio;
 }
 
-function calcularSalarioDiario(salarioMensual){
-    return salarioMensual / 30;
+function calcularSalarioSemanal(salarioMensual) {
+  const cantidadSemanas = 4;
+  return salarioMensual / cantidadSemanas;
 }
 
-function calcularSalarioHora(salarioMensual){
-    return salarioMensual / 160;
+function calcularSalarioDiario(salarioMensual) {
+  const cantidadDiasMes = 30;
+  return salarioMensual / cantidadDiasMes;
 }
 
-console.log('Salario anual es de: $' + calcularSalarioAnual(salarioMensual) + '\nSalario Semanal: $' + calcularSalarioSemanal(salarioMensual) + '\nSalario Diario: $' + calcularSalarioDiario(salarioMensual) + '\nSalario por hora: $' + calcularSalarioHora(salarioMensual)); 
-*/
+function calcularSalarioHora(salarioMensual) {
+  const cantidadHorasMes = 160;
+  return salarioMensual / cantidadHorasMes;
+}
+
+console.log(
+  "Salario anual es de: $" +
+    calcularSalarioAnual(salarioMensual) +
+    "\nSalario Semanal: $" +
+    calcularSalarioSemanal(salarioMensual) +
+    "\nSalario Diario: $" +
+    calcularSalarioDiario(salarioMensual) +
+    "\nSalario por hora: $" +
+    calcularSalarioHora(salarioMensual)
+); */
 
 /*
     Condicionales If-Else
@@ -429,36 +431,19 @@ console.log('Salario anual es de: $' + calcularSalarioAnual(salarioMensual) + '\
 // TAREA: Cambiar el operador a '-', y fijarse que llame a la función 'restar' en vez de a la de 'sumar'.
 
 //Tarea 1:
-/*
-const operador = '+';
-const numero1 = 10, numero2 = 20;
+
+/* let operador = prompt("Ingrese (+) para sumar o (-) para restar: ");
+let numero1 = Number(prompt("Ingrese el primer número: "));
+let numero2 = Number(prompt("Ingrese el segundo número: "));
 let resultado;
 
-if(operador === '+'){
-    resultado = sumar(numero1, numero2)
-}
-else{
-    resultado = restar(numero1, numero2)
-}
-
-console.log("El resultado de " + numero1 + ' ' + operador + ' ' + numero2 + " es " + resultado);
-
-//Tarea 2
-
-const operador = '-';
-const numero1 = 10, numero2 = 20;
-let resultado;
-
-if(operador === '+'){
-    resultado = sumar(numero1, numero2)
-}
-else{
-    resultado = restar(numero1, numero2)
+if (operador === "+") {
+  resultado = sumar(numero1, numero2);
+} else {
+  resultado = restar(numero1, numero2);
 }
 
-console.log("El resultado de " + numero1 + ' ' + operador + ' ' + numero2 + " es " + resultado);
-*/
-
+console.log("El resultado de " + numero1 + " " + operador + " " + numero2 + " es " + resultado); */
 
 /*
     'If' - 'Else if' - 'Else'
@@ -491,11 +476,11 @@ console.log("El resultado de " + numero1 + ' ' + operador + ' ' + numero2 + " es
 // TAREA: Creemos 2 funciones más: dividir y multiplicar.
 
 function dividir(numero1, numero2) {
-    return numero1 / numero2;
+  return numero1 / numero2;
 }
 
 function multiplicar(numero1, numero2) {
-    return numero1 * numero2;
+  return numero1 * numero2;
 }
 
 // TAREA: Reescribamos el if-else que teníamos y extendámolos, agregando:
@@ -547,7 +532,6 @@ console.log(`El resultado de ${numero1} ${operador} ${numero2} es ${resultado}`)
     let maradonaMejorQuePele = true;
 */
 
-
 // TAREA: usando el operador !, Intentá invertir una variable (de true a false, o de false a true) e imprimí el
 // resultado en la consola.
 
@@ -563,7 +547,6 @@ console.log(!!miVariable); //true
 // El siguiente nivel es el que está en nivel2.js                         //
 ////////////////////////////////////////////////////////////////////////////
 
-
 // Tarea 1:
 // Preguntarle al usuario su nombre.
 // Si el nombre del usuario es el mismo que  el  de ustedes
@@ -573,8 +556,7 @@ console.log(!!miVariable); //true
 // Imprimir "Hola " y el nombre, " te llamás igual que mi ..."
 // Si no, simplemente imprimir "Hola " + nombre!
 
-/* 
-let nombreIngresado = prompt("Ingrese su nombre: ");
+/* let nombreIngresado = prompt("Ingrese su nombre: ");
 const miNombre = "mauro";
 const nombreDePariente = "lucas";
 
@@ -586,27 +568,25 @@ if (nombreIngresadoEnMinusculas === miNombre) {
     console.log(`Hola, ${nombreIngresado} te llamas igual que mi pariente!`);
 }else {
     console.log(`Hola ${nombreIngresado}!`);
-}
- */
+} */
 
 //Tarea 2:
 // Preguntar la edad del usuario
 // Hacerle saber si tiene más, menos ó la misma edad que nosotros.
 
-/* 
-let edadUsuario = Number(prompt("Ingrese su edad: "));
-const MI_EDAD = 27;
+/* let edadUsuario = Number(prompt("Ingrese su edad: "));
+const MI_EDAD = 28;
 
 if (edadUsuario === MI_EDAD) {
-    console.log("Tienes mi misma edad!");
+  console.log("Tienes mi misma edad!");
 } else if (edadUsuario > MI_EDAD) {
-    console.log("Eres mayor que yo");
+  console.log("Eres mayor que yo");
 } else if (edadUsuario < MI_EDAD) {
-    console.log("Eres menor que yo")
+  console.log("Eres menor que yo");
 } else {
-    console.log("No entendi tu respuesta");
-}
- */
+  console.log("No entendi tu respuesta");
+} */
+
 //Tarea 3:
 // Preguntarle al usuario si tiene documento, y que conteste con "si" o "no".
 // Si dice si, preguntarle la edad.
@@ -616,8 +596,7 @@ if (edadUsuario === MI_EDAD) {
 // Si no entendemos la respuesta, le decimos que no entendimos la respuesta.
 // Punto bonus: SI, NO, Si, No, si, no.
 
-/* 
-const RESPUESTA_DNI = (prompt("Tienes DNI? Si/No") || '').toUpperCase(); //el or es para pasar de NULL a cadena vacia y asi evitar el error
+/* const RESPUESTA_DNI = (prompt("Tienes DNI? Si/No") || '').toUpperCase(); //el or es para pasar de NULL a cadena vacia y asi evitar el error
 const RESPUESTA_SI = 'SI';
 const RESPUESTA_NO = 'NO';
 const EDAD_MINIMA_PARA_ENTRAR = 18;
@@ -635,6 +614,4 @@ if (RESPUESTA_DNI === RESPUESTA_SI) {
     console.log("No puede ingresar al bar");
 } else {
     console.log("No entendimos su respuesta");
-}
-
- */
+} */
